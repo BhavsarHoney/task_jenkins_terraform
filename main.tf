@@ -18,3 +18,9 @@ resource "azurerm_storage_account" "example" {
     Create_Date : "5 march 2024"
   }
 }
+
+resource "azurerm_storage_container" "tfstate" {
+  name                  = "tfstate"
+  storage_account_name  = azurerm_storage_account.example.name
+  container_access_type = "private"
+}

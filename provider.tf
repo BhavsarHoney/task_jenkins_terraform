@@ -8,7 +8,7 @@ terraform {
   
   backend "azurerm" {
     storage_account_name = "taskhani"
-    container_name       = "task_container"
+    container_name       = "tfstate"
     key                  = "terraform.tfstate"
   }
 }
