@@ -5,6 +5,11 @@ terraform {
       version = "=3.0.0"
     }
   }
+  backend "azurerm" {
+    storage_account_name = "taskhani"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+  }
   
 
 }
